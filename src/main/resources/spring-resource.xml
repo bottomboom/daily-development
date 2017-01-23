@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+   <!-- <bean id="injectionDAO" class="daily0921.InjectionDAOImpl"></bean>
+
+    <bean id="myResource" class="daily0921.MyResource"></bean>-->
+    <bean id="beanScope" class="daily0921.injection.BeanScope" scope="singleton"/>
+    <context:component-scan base-package="daily0921"></context:component-scan>
+    <context:property-placeholder location="config.properties"/>
+
+</beans>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--
+    &lt;!&ndash;构造器注入&ndash;&gt;
+    <bean class="beanConfiguration1115.CDPlayer">
+        &lt;!&ndash; 构造器注入bean引用&ndash;&gt;
+       <constructor-arg ref="blankDisc"/>
+    </bean>
+    <bean id="sgtPeppers" class="beanConfiguration1115.SgtPeppers"/>
+    <bean id = "blankDisc" class="beanConfiguration1115.BlankDisc">
+        &lt;!&ndash; 构造器注入变量&ndash;&gt;
+        <constructor-arg value="Fantasy"/>
+        <constructor-arg value="Jay"/>
+        <constructor-arg>
+            <list>
+                <value>Confession Ballon</value>
+                <value>Simple Love</value>
+                <value>Can't Say Out</value>
+            </list>
+        </constructor-arg>
+    </bean>
+-->
+
+    <!--Setter注入-->
+    <bean class="spring.beanConfiguration1115.CDPlayer">
+        <property name="compactDisc" ref="blankDisc"/> <!--name和setter中的参数名一致-->
+    </bean>
+    <bean id="sgtPeppers" class="spring.beanConfiguration1115.SgtPeppers"/>
+    <bean id="blankDisc" class="spring.beanConfiguration1115.BlankDisc">
+        <property name="title" value="Seven Mile Aromatic"/>
+        <property name="artist" value="GrandMa"/>
+        <property name="tracks">
+            <list>
+                <value>Seven Mile Aromatic</value>
+                <value>GrandMa</value>
+                <value>Run Aground</value>
+            </list>
+        </property>
+    </bean>
+</beans>
